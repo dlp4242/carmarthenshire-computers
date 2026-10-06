@@ -42,7 +42,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,14,18,.85)
 .nav-cta:hover{background:var(--accent-dim)}
 
 .hero{padding:0;border:0;position:relative}
-.top{max-width:1180px;margin:0 auto;padding:88px var(--pad) 36px;display:grid;grid-template-columns:minmax(280px,400px) 1fr;gap:28px 40px;align-items:start}
+.band{max-width:1180px;margin:0 auto;padding:52px var(--pad);display:grid;grid-template-columns:minmax(280px,400px) minmax(0,1fr);column-gap:56px;row-gap:20px;align-items:start}
+.band.first{padding-top:96px;padding-bottom:40px}
 .hero-kicker{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
 .hero h1{font-size:clamp(32px,3.4vw,42px);max-width:14ch;margin-bottom:14px}
 .hero-sub{font-size:18px;color:var(--text-soft);margin-bottom:20px;line-height:1.5}
@@ -58,49 +59,42 @@ button.btn{border:0;cursor:pointer;font-family:inherit;width:auto;justify-self:s
 .stat .k{font-size:14px;color:var(--muted);margin-top:2px}
 .hero-note{margin-top:16px;font-size:16px;color:var(--text-soft);line-height:1.5}
 
-section{padding:48px var(--pad)}
-.container{max-width:1180px;margin:0 auto}
-.section-label{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
-.section-title{font-size:clamp(26px,3vw,34px);margin-bottom:8px}
-.fix-head{margin-bottom:12px}
-.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.svc{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px 16px 12px}
-.svc h3{font-size:18px;margin-bottom:6px}
-.svc p{font-size:16px;color:var(--text-soft);line-height:1.45}
-.svc ul{list-style:none;margin-top:10px;padding-top:8px;border-top:1px solid var(--border)}
-.svc li{font-size:15px;color:var(--text-soft);padding:3px 0;display:flex;gap:8px;align-items:baseline}
+section{padding:0}
+.section-label{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.section-title{font-size:clamp(26px,3vw,34px);margin-bottom:14px;max-width:18ch}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.svc{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:18px 18px 14px}
+.svc h3,.point h4{font-size:18px;margin-bottom:6px}
+.svc p,.point p,.why-copy p{font-size:16px;color:var(--text-soft);line-height:1.5}
+.why-copy p{margin-bottom:14px}
+.why-copy p:first-of-type{color:var(--text)}
+.svc ul{list-style:none;margin-top:12px;padding-top:10px;border-top:1px solid var(--border)}
+.svc li{font-size:15px;color:var(--text-soft);padding:4px 0;display:flex;gap:8px;align-items:baseline}
 .svc li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
 
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-@media (max-width:720px){.why-grid{grid-template-columns:1fr}}
-.why-copy p{color:var(--text-soft);margin-bottom:16px;font-size:16px;line-height:1.7}
-.why-copy p:first-of-type{color:var(--text);font-size:18px}
-.points{display:grid;gap:16px}
-.point{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:20px 22px}
-.point h4{font-size:15px;margin-bottom:6px}
-.point p{font-size:14px;color:var(--text-soft);line-height:1.55}
+.shots{max-width:1180px;margin:0 auto;padding:8px var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.shot{height:200px;border-radius:10px;background-position:center;background-size:cover}
 
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-@media (max-width:720px){.contact-grid{grid-template-columns:1fr}}
-.contact-lede{color:var(--text-soft);margin-bottom:28px;font-size:16px;line-height:1.65;max-width:40ch}
-.channels{display:grid;gap:2px}
-.channel{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--border);font-size:15px}
+.contact-lede{color:var(--text-soft);margin-bottom:20px;font-size:17px;line-height:1.5}
+.channels{display:grid}
+.channel{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--border);font-size:16px}
 .channel .k{font-family:var(--mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.channel .v{color:var(--text-soft)}
+.channel .v{color:var(--text);text-align:right}
 a.channel:hover .v{color:var(--accent)}
-form{display:grid;gap:14px}
-.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em;font-family:var(--mono)}
-.field input,.field textarea,.field select{width:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:var(--font);font-size:15px}
+form{display:grid;gap:12px;align-content:start}
+.field label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:var(--font);font-size:16px}
 .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent)}
-.field textarea{min-height:110px;resize:vertical}
-.form-note{font-size:13px;color:var(--muted);margin-top:4px}
+.field textarea{min-height:96px;resize:vertical}
+.form-note{font-size:14px;color:var(--muted);line-height:1.4}
 
-footer{border-top:1px solid var(--border);padding:36px var(--pad)}
-.footer-inner{max-width:var(--measure);margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:28px var(--pad) 40px}
+.footer-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:var(--muted)}
 .footer-inner .brand{font-size:15px;color:var(--text-soft)}
 
 @media (max-width:900px){
-  .top{grid-template-columns:1fr;padding-top:84px}
+  .band,.shots{grid-template-columns:1fr}
+  .band.first{padding-top:84px}
   .svc-grid{grid-template-columns:1fr}
 }
 @media (max-width:640px){
@@ -141,7 +135,7 @@ footer{border-top:1px solid var(--border);padding:36px var(--pad)}
 </nav>
 
 <header class="hero" id="top">
-  <div class="top">
+  <div class="band first">
     <div>
       <p class="hero-kicker">Llanelli · Carmarthen · Ammanford</p>
       <h1>Broken or slow computer?</h1>
@@ -205,64 +199,58 @@ footer{border-top:1px solid var(--border);padding:36px var(--pad)}
   </div>
 </header>
 
-<section class="visuals" style="padding:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:100%;">
-    <div style="min-height:220px;background:url('desk-laptop.jpg') center/cover no-repeat;"></div>
-    <div style="min-height:220px;background:url('tuf-laptop.jpg') center/cover no-repeat;"></div>
-  </div>
+<section class="shots">
+  <div class="shot" style="background-image:url('desk-laptop.jpg')"></div>
+  <div class="shot" style="background-image:url('tuf-laptop.jpg')"></div>
 </section>
 
-<section id="why">
-  <div class="container">
+<section id="why" class="band">
+  <div>
     <p class="section-label">Why choose us</p>
     <h2 class="section-title">Simple pricing. Free collection. Straight answers.</h2>
-    <div class="why-grid">
-      <div class="why-copy">
-        <p>We’re a small independent repair service in Carmarthenshire. No big chain, no sales targets, no pressure to buy a new computer.</p>
-        <p>Labour is a fixed £85. That covers the work whether it takes forty minutes or a few hours. If parts are needed we’ll tell you the cost before fitting them. Most everyday jobs are finished the same day or the next day.</p>
-        <p>Collection is always free across the local area. We’ll come and get it, sort it, and bring it back.</p>
-      </div>
-      <div class="points">
-        <div class="point">
-          <h4>£85 fixed labour</h4>
-          <p>You know where you stand. Once we start looking at the computer, the labour price is £85. No surprises.</p>
-        </div>
-        <div class="point">
-          <h4>Free collection</h4>
-          <p>We collect and return across Llanelli, Carmarthen, Ammanford and the surrounding area at no charge.</p>
-        </div>
-        <div class="point">
-          <h4>Honest advice</h4>
-          <p>If a computer is beyond economic repair we’ll say so. We can often recover your files and help you with a replacement if needed.</p>
-        </div>
-        <div class="point">
-          <h4>We guarantee our work</h4>
-          <p>If something we’ve done isn’t right, bring it back and we’ll sort it. No complicated warranty terms.</p>
-        </div>
-      </div>
+    <div class="why-copy">
+      <p>We’re a small independent repair service in Carmarthenshire. No big chain, no sales targets, no pressure to buy a new computer.</p>
+      <p>Labour is a fixed £85. That covers the work whether it takes forty minutes or a few hours. If parts are needed we’ll tell you the cost before fitting them. Most everyday jobs are finished the same day or the next day.</p>
+      <p>Collection is always free across the local area. We’ll come and get it, sort it, and bring it back.</p>
+    </div>
+  </div>
+  <div class="svc-grid">
+    <div class="point svc">
+      <h4>£85 fixed labour</h4>
+      <p>You know where you stand. Once we start looking at the computer, the labour price is £85. No surprises.</p>
+    </div>
+    <div class="point svc">
+      <h4>Free collection</h4>
+      <p>We collect and return across Llanelli, Carmarthen, Ammanford and the surrounding area at no charge.</p>
+    </div>
+    <div class="point svc">
+      <h4>Honest advice</h4>
+      <p>If a computer is beyond economic repair we’ll say so. We can often recover your files and help you with a replacement if needed.</p>
+    </div>
+    <div class="point svc">
+      <h4>We guarantee our work</h4>
+      <p>If something we’ve done isn’t right, bring it back and we’ll sort it. No complicated warranty terms.</p>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <div class="container">
+<section id="contact" class="band">
+  <div>
     <p class="section-label">Contact</p>
     <h2 class="section-title">Call or WhatsApp</h2>
-    <div class="contact-grid">
-      <div>
-        <p class="contact-lede">Call or message. We’ll tell you if we can help and arrange free collection. The form below does not send on its own.</p>
-        <div class="hero-actions" style="margin-bottom:22px">
-          <a class="btn btn-primary" href="tel:+447512049014">Call 07512 049014</a>
-          <a class="btn btn-ghost" href="https://wa.me/447512049014">WhatsApp</a>
-        </div>
-        <div class="channels">
-          <a class="channel" href="tel:+447512049014"><span class="k">Phone</span><span class="v">07512 049014</span></a>
-          <a class="channel" href="https://wa.me/447512049014"><span class="k">WhatsApp</span><span class="v">Message us</span></a>
-          <a class="channel" href="mailto:enquiries@carmarthenshirecomputerservices.co.uk"><span class="k">Email</span><span class="v">enquiries@carmarthenshirecomputerservices.co.uk</span></a>
-          <div class="channel"><span class="k">Area</span><span class="v">Llanelli, Carmarthen, Ammanford & surrounding</span></div>
-        </div>
-      </div>
-      <form id="contactForm">
+    <p class="contact-lede">Call or message. We’ll tell you if we can help and arrange free collection.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="tel:+447512049014">Call 07512 049014</a>
+      <a class="btn btn-ghost" href="https://wa.me/447512049014">WhatsApp</a>
+    </div>
+    <div class="channels">
+      <a class="channel" href="tel:+447512049014"><span class="k">Phone</span><span class="v">07512 049014</span></a>
+      <a class="channel" href="https://wa.me/447512049014"><span class="k">WhatsApp</span><span class="v">Message us</span></a>
+      <a class="channel" href="mailto:enquiries@carmarthenshirecomputerservices.co.uk"><span class="k">Email</span><span class="v">enquiries@carmarthenshirecomputerservices.co.uk</span></a>
+      <div class="channel"><span class="k">Area</span><span class="v">Llanelli, Carmarthen, Ammanford</span></div>
+    </div>
+  </div>
+  <form id="contactForm">
         <div class="field">
           <label for="name">Name</label>
           <input id="name" name="name" type="text" required placeholder="Your name">
@@ -289,8 +277,6 @@ footer{border-top:1px solid var(--border);padding:36px var(--pad)}
         <button class="btn btn-primary" type="submit">Send</button>
         <p class="form-note">Opens your email with the details filled in. Press send there. If nothing opens, call or WhatsApp.</p>
       </form>
-    </div>
-  </div>
 </section>
 
 <footer>
