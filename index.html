@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carmarthenshire Computer Services — Laptop & PC Repair | Llanelli, Carmarthen & surrounding areas</title>
+<meta name="description" content="Honest computer and laptop repair in Carmarthenshire. Broken, slow or won’t turn on? We can help. Fixed price labour £85. Free collection. Windows 10 to 11 upgrades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0e12;
+  --bg-raised: #14181f;
+  --bg-card: #1a1f28;
+  --border: rgba(255,255,255,.08);
+  --text: #eef0f4;
+  --text-soft: #a0a8b8;
+  --muted: #6b7385;
+  --accent: #3d8bfd;
+  --accent-dim: #2563c7;
+  --green: #34d399;
+  --pad: clamp(20px, 4vw, 56px);
+  --measure: 1080px;
+  --font: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h1,h2,h3{font-weight:600;line-height:1.2;letter-spacing:-.02em}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,14,18,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 var(--pad)}
+.nav-inner{max-width:var(--measure);margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;font-size:17px;letter-spacing:-.03em}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;font-size:14px;color:var(--text-soft)}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{font-size:13px;font-weight:500;background:var(--accent);color:#fff;padding:8px 16px;border-radius:6px}
+.nav-cta:hover{background:var(--accent-dim)}
+
+.hero{padding:120px var(--pad) 80px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url("hero-laptop.jpg") center/cover no-repeat;opacity:.18;pointer-events:none}
+.hero-inner{max-width:var(--measure);margin:0 auto;position:relative;z-index:1}
+.hero-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+.hero h1{font-size:clamp(32px,5vw,48px);max-width:16ch;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:18px;color:var(--text-soft);max-width:42ch;margin-bottom:32px;line-height:1.65}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
+.btn{display:inline-flex;align-items:center;padding:14px 24px;border-radius:6px;font-size:15px;font-weight:500;transition:.2s}
+button.btn{border:0;cursor:pointer;font-family:inherit;width:auto;justify-self:start}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dim)}
+.btn-ghost{border:1px solid var(--border);color:var(--text-soft)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--text)}
+.hero-stats{display:flex;gap:40px;flex-wrap:wrap}
+.stat .v{font-family:var(--mono);font-size:20px;font-weight:500;color:var(--text)}
+.stat .k{font-size:13px;color:var(--muted);margin-top:4px}
+
+section{padding:72px var(--pad)}
+.container{max-width:var(--measure);margin:0 auto}
+.section-label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.section-title{font-size:clamp(24px,3.5vw,36px);margin-bottom:16px}
+.section-lead{color:var(--text-soft);max-width:48ch;margin-bottom:40px;font-size:17px}
+
+.services{background:var(--bg-raised);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.svc{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:28px}
+.svc h3{font-size:18px;margin-bottom:10px}
+.svc p{font-size:14.5px;color:var(--text-soft);line-height:1.6}
+.svc ul{list-style:none;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
+.svc li{font-size:13.5px;color:var(--text-soft);padding:5px 0;display:flex;gap:10px;align-items:baseline}
+.svc li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);flex:none;margin-top:7px}
+
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media (max-width:720px){.why-grid{grid-template-columns:1fr}}
+.why-copy p{color:var(--text-soft);margin-bottom:16px;font-size:16px;line-height:1.7}
+.why-copy p:first-of-type{color:var(--text);font-size:18px}
+.points{display:grid;gap:16px}
+.point{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:20px 22px}
+.point h4{font-size:15px;margin-bottom:6px}
+.point p{font-size:14px;color:var(--text-soft);line-height:1.55}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media (max-width:720px){.contact-grid{grid-template-columns:1fr}}
+.contact-lede{color:var(--text-soft);margin-bottom:28px;font-size:16px;line-height:1.65;max-width:40ch}
+.channels{display:grid;gap:2px}
+.channel{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--border);font-size:15px}
+.channel .k{font-family:var(--mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.channel .v{color:var(--text-soft)}
+a.channel:hover .v{color:var(--accent)}
+form{display:grid;gap:14px}
+.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em;font-family:var(--mono)}
+.field input,.field textarea,.field select{width:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:var(--font);font-size:15px}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent)}
+.field textarea{min-height:110px;resize:vertical}
+.form-note{font-size:13px;color:var(--muted);margin-top:4px}
+
+footer{border-top:1px solid var(--border);padding:36px var(--pad)}
+.footer-inner{max-width:var(--measure);margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted)}
+.footer-inner .brand{font-size:15px;color:var(--text-soft)}
+
+@media (max-width:640px){
+  .nav-links{display:none}
+  .hero-stats{gap:24px}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Carmarthenshire Computer Services",
+  "description": "Honest computer and laptop repair in Carmarthenshire. Fixed price labour £85. Free collection. Windows 10 to 11 upgrades.",
+  "url": "https://carmarthenshirecomputerservices.co.uk",
+  "telephone": "+447512049014",
+  "areaServed": ["Llanelli","Carmarthen","Ammanford","Carmarthenshire"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Carmarthenshire",
+    "addressCountry": "GB"
+  },
+  "priceRange": "£"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">Carmarthenshire <span>Computer Services</span></a>
+    <div class="nav-links">
+      <a href="#services">What we fix</a>
+      <a href="#why">Why us</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="tel:+447512049014">Call 07512 049014</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <p class="hero-kicker">Llanelli · Carmarthen · Ammanford · Carmarthenshire</p>
+    <h1>Broken or slow computer?<br>You’ve come to the right place.</h1>
+    <p class="hero-sub">We fix laptops and PCs that won’t turn on, run slowly, or just need sorting out. Fixed price labour £85. Free collection. Straight answers.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="tel:+447512049014">Call 07512 049014</a>
+      <a class="btn btn-ghost" href="https://wa.me/447512049014">WhatsApp</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="v">£85</div><div class="k">Fixed labour price</div></div>
+      <div class="stat"><div class="v">Free</div><div class="k">Collection & return</div></div>
+      <div class="stat"><div class="v">Same / next day</div><div class="k">Most jobs completed quickly</div></div>
+    </div>
+    <p style="margin-top:28px;font-size:14px;color:var(--text-soft);max-width:52ch;">Labour is £85 whether the job takes 40 minutes or a few hours. Parts are extra if needed. Free collection across the local area.</p>
+  </div>
+</header>
+
+<section class="services" id="services">
+  <div class="container">
+    <p class="section-label">What we fix</p>
+    <h2 class="section-title">Common problems we deal with</h2>
+    <p class="section-lead">If your computer or laptop is broken, slow, or not working properly, we can usually help.</p>
+    <div class="svc-grid">
+      <div class="svc">
+        <h3>Won’t turn on or boot</h3>
+        <p>Computer is dead, stuck on a logo, or keeps restarting.</p>
+        <ul>
+          <li>Power and charging problems</li>
+          <li>Won’t start into Windows</li>
+          <li>Blue screens and crashes</li>
+          <li>Hard drive or SSD failure</li>
+        </ul>
+      </div>
+      <div class="svc">
+        <h3>Slow or full of junk</h3>
+        <p>Used to be fine, now feels sluggish or takes forever to do anything.</p>
+        <ul>
+          <li>Backup, clean install and restore</li>
+          <li>Removing bloat and unwanted software</li>
+          <li>Windows updates and basic setup</li>
+          <li>Making an older computer usable again</li>
+        </ul>
+      </div>
+      <div class="svc">
+        <h3>Broken screens & hardware</h3>
+        <p>Cracked screens, faulty keyboards, failing drives and more.</p>
+        <ul>
+          <li>Laptop screen replacement</li>
+          <li>Keyboard and trackpad issues</li>
+          <li>Adding more storage or memory</li>
+          <li>Simple hardware repairs</li>
+        </ul>
+      </div>
+      <div class="svc">
+        <h3>Windows 10 to 11</h3>
+        <p>Microsoft says your computer isn’t compatible? We can often still get Windows 11 running properly.</p>
+        <ul>
+          <li>Windows 11 upgrade on older hardware</li>
+          <li>Clean install and setup</li>
+          <li>Keeping your files safe during the process</li>
+          <li>Making sure everything works afterwards</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visuals" style="padding:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:100%;">
+    <div style="min-height:220px;background:url('desk-laptop.jpg') center/cover no-repeat;"></div>
+    <div style="min-height:220px;background:url('tuf-laptop.jpg') center/cover no-repeat;"></div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <p class="section-label">Why choose us</p>
+    <h2 class="section-title">Simple pricing. Free collection. Straight answers.</h2>
+    <div class="why-grid">
+      <div class="why-copy">
+        <p>We’re a small independent repair service in Carmarthenshire. No big chain, no sales targets, no pressure to buy a new computer.</p>
+        <p>Labour is a fixed £85. That covers the work whether it takes forty minutes or a few hours. If parts are needed we’ll tell you the cost before fitting them. Most everyday jobs are finished the same day or the next day.</p>
+        <p>Collection is always free across the local area. We’ll come and get it, sort it, and bring it back.</p>
+      </div>
+      <div class="points">
+        <div class="point">
+          <h4>£85 fixed labour</h4>
+          <p>You know where you stand. Once we start looking at the computer, the labour price is £85. No surprises.</p>
+        </div>
+        <div class="point">
+          <h4>Free collection</h4>
+          <p>We collect and return across Llanelli, Carmarthen, Ammanford and the surrounding area at no charge.</p>
+        </div>
+        <div class="point">
+          <h4>Honest advice</h4>
+          <p>If a computer is beyond economic repair we’ll say so. We can often recover your files and help you with a replacement if needed.</p>
+        </div>
+        <div class="point">
+          <h4>We guarantee our work</h4>
+          <p>If something we’ve done isn’t right, bring it back and we’ll sort it. No complicated warranty terms.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Call or WhatsApp</h2>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-lede">Call or message. We’ll tell you if we can help and arrange free collection. The form below does not send on its own.</p>
+        <div class="hero-actions" style="margin-bottom:22px">
+          <a class="btn btn-primary" href="tel:+447512049014">Call 07512 049014</a>
+          <a class="btn btn-ghost" href="https://wa.me/447512049014">WhatsApp</a>
+        </div>
+        <div class="channels">
+          <a class="channel" href="tel:+447512049014"><span class="k">Phone</span><span class="v">07512 049014</span></a>
+          <a class="channel" href="https://wa.me/447512049014"><span class="k">WhatsApp</span><span class="v">Message us</span></a>
+          <a class="channel" href="mailto:enquiries@carmarthenshirecomputerservices.co.uk"><span class="k">Email</span><span class="v">enquiries@carmarthenshirecomputerservices.co.uk</span></a>
+          <div class="channel"><span class="k">Area</span><span class="v">Llanelli, Carmarthen, Ammanford & surrounding</span></div>
+        </div>
+      </div>
+      <form id="contactForm">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your name">
+        </div>
+        <div class="field">
+          <label for="email">Email or phone</label>
+          <input id="email" name="email" type="text" required placeholder="How to reach you">
+        </div>
+        <div class="field">
+          <label for="type">What do you need?</label>
+          <select id="type" name="type">
+            <option>Won’t turn on / boot</option>
+            <option>Slow computer</option>
+            <option>Broken screen</option>
+            <option>Windows 10 to 11 upgrade</option>
+            <option>Data recovery / files</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="msg">Computer & problem</label>
+          <textarea id="msg" name="message" placeholder="Make and model if you know it, what’s happening, roughly how old it is."></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send</button>
+        <p class="form-note">Opens your email with the details filled in. Press send there. If nothing opens, call or WhatsApp.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="brand">Carmarthenshire <span style="color:var(--accent)">Computer Services</span></div>
+    <div>Llanelli · Carmarthen · Ammanford · Carmarthenshire</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  var f = e.target;
+  if (!f.reportValidity()) return;
+  var body = "Name: " + encodeURIComponent(f.name.value) +
+             "%0AContact: " + encodeURIComponent(f.email.value) +
+             "%0AType: " + encodeURIComponent(f.type.value) +
+             "%0A%0A" + encodeURIComponent(f.message.value || "");
+  window.location.href = "mailto:enquiries@carmarthenshirecomputerservices.co.uk?subject=" +
+    encodeURIComponent("Enquiry — " + f.type.value) + "&body=" + body;
+});
+</script>
+</body>
+</html>
